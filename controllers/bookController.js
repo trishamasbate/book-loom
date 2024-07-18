@@ -2,8 +2,8 @@ const { Book, User } = require('../models');
 
 const addBook = async (req, res) => {
   try {
-    const { title, author } = req.body;
-    const book = await Book.create({ title, author, userId: req.session.userId });
+    const { title, author, synopsis } = req.body;
+    const book = await Book.create({ title, author, synopsis, userId: req.session.userId });
     res.redirect('/books');
   } catch (error) {
     res.status(500).send('Error adding book');
@@ -12,11 +12,12 @@ const addBook = async (req, res) => {
 
 const editBook = async (req, res) => {
   try {
-    const { id, title, author } = req.body;
+    const { id, title, author, synopsis } = req.body;
     const book = await Book.findByPk(id);
     if (book && book.userId === req.session.userId) {
       book.title = title;
       book.author = author;
+      book.synopsis = synopsis;
       await book.save();
       res.redirect('/books');
     } else {
