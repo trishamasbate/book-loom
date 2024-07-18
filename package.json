@@ -1,0 +1,20 @@
+{
+    "name": "book-sharing-platform",
+    "version": "1.0.0",
+    "description": "A web application for sharing and borrowing books.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "express-handlebars": "^5.3.4",
+      "express-session": "^1.17.2",
+      "sequelize": "^6.6.5",
+      "pg": "^8.6.0",
+      "pg-hstore": "^2.3.3",
+      "dotenv": "^10.0.0",
+      "socket.io": "^4.1.3"
+    }
+  }
+  
