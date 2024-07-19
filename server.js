@@ -11,6 +11,7 @@ const borrowRoutes = require('./routes/borrowRoutes');
 require('dotenv').config();
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 const server = http.createServer(app);
 const io = new Server(server);
 
@@ -41,8 +42,12 @@ io.on('connection', (socket) => {
   });
 });
 
-sequelize.sync().then(() => {
-  server.listen(process.env.PORT, () => {
-    console.log(`Server running on port ${process.env.PORT}`);
+sequelize.sync()
+  .then(() => {
+    server.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
   });
-});
