@@ -17,7 +17,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-light-gray text-dark">
         <div class="container-fluid">
           <a class="navbar-brand fs-2" href="/">
-            <img src="../public/images/book-loom-logo.png" alt="Book Loom Logo" style="height: 40px;">
+            <img src="/images/book-loom-logo.gif" alt="Book Loom Logo" style="height: 40px;">
           </a>
           <button
             class="navbar-toggler"
@@ -31,13 +31,13 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
               </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/dashboard">Dashboard</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+              </li>
               {{#if logged_in}}
                 <li class="nav-item">
                   <a class="nav-link" href="#" id="skin-logout">Logout</a>
@@ -58,16 +58,15 @@
     <div class="container" style="margin-bottom: 15vh;">
       {{{body}}}
     </div>
-<footer class="bg-dark text-white py-3" style="position: fixed; bottom: 0; width: 100%;">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6 text-center">
-        <h5>📕📗📘</h5>
-        <h6>&copy; 2024 All Rights Reserved.</h6>
+    <footer class="bg-dark text-white py-3" style="position: fixed; bottom: 0; width: 100%;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h6>&copy; 2024 All Rights Reserved.</h6>
+          </div>
+        </div> 
       </div>
-    </div> 
-  </div>
-</footer>
+    </footer>
     <script src="/js/delete-post.js"></script>
     <script src="/js/login.js"></script>
     <script src="/js/logout.js"></script>
