@@ -48,6 +48,7 @@ const listBooks = async (req, res) => {
     const books = await Book.findAll({ where: { userId: req.session.userId } });
     res.render('books/listBooks', { books });
   } catch (error) {
+    console.error('Error fetching books:', error);
     res.status(500).send('Error fetching books');
   }
 };

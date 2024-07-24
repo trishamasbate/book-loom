@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../config/database');
 
-const User = require('./user')(sequelize, Sequelize);
-const Book = require('./book')(sequelize, Sequelize);
+const User = require('./user');
+const Book = require('./book');
 
 User.hasMany(Book, { as: 'books' });
 Book.belongsTo(User, {
