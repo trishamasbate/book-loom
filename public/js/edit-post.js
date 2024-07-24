@@ -8,14 +8,13 @@ const post_id = window.location.toString().split("/")[
     event.preventDefault();
   
     const title = document.querySelector("#title-update-skin-post").value.trim();
-    const content = document
-      .querySelector("#content-update-skin-post")
-      .value.trim();
+    const author = document.querySelector("#author-update-skin-post").value.trim();
+    const synopsis = document.querySelector("#synopsis-update-skin-post").value.trim();
   
-    if (title && content) {
+    if (title && author && synopsis) {
       const response = await fetch(`/api/posts/${post_id}`, {
         method: "PUT",
-        body: JSON.stringify({ title, content }),
+        body: JSON.stringify({ title, author, synopsis}),
         headers: { "Content-Type": "application/json" },
       });
   

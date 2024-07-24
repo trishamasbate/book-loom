@@ -7,17 +7,27 @@
         type="text"
         class="form-control"
         id="title-update-skin-post"
-        placeholder="Enter post title"
+        placeholder="Enter Book"
         value="{{title}}"
       />
     </div>
     <div class="mb-3">
-      <label for="content-update-skin-post" class="form-label custom-text-color">Content</label>
+      <label for="author-update-skin-post" class="form-label custom-text-color">Author</label>
+      <input
+        type="text"
+        class="form-control"
+        id="author-update-skin-post"
+        placeholder="Enter Author"
+        value="{{author}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="synopsis-update-skin-post" class="form-label custom-text-color">Synopsis</label>
       <textarea
         class="form-control"
-        id="content-update-skin-post"
+        id="synopsis-update-skin-post"
         rows="3"
-        placeholder="Enter post content"
+        placeholder="Enter Synopsis"
       >{{content}}</textarea>
     </div>
     <button type="submit" id="update-skin-post" class="btn btn-primary">Update Post</button>

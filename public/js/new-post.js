@@ -3,12 +3,13 @@ const newSkinPostFormHandler = async (event) => {
     event.preventDefault();
   
     const title = document.querySelector('#title-new-skin-post').value.trim();
-    const content = document.querySelector('#content-new-skin-post').value.trim();
+    const author = document.querySelector('#author-new-skin-post').value.trim();
+    const synopsis = document.querySelector('#synopsis-new-skin-post').value.trim();
   
-    if (title && content) {
+    if (title && author && synopsis) {
       const response = await fetch('/api/posts', {
         method: 'POST',
-        body: JSON.stringify({ title, content }),
+        body: JSON.stringify({ title, author, synopsis }),
         headers: { 'Content-Type': 'application/json' },
       });
   

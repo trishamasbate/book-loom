@@ -15,7 +15,11 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    content: {
+    author: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    synopsis: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {

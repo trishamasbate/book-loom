@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <h2 class="mb-4 text-dark">Create a Blog Contribution.</h2>
+  <h2 class="mb-4 text-dark">Create a Book Contribution.</h2>
   <form class="new-skin-post-form">
     <div class="mb-3">
       <label for="title-new-skin-post" class="form-label custom-text-color">Title:</label>
@@ -7,20 +7,29 @@
         type="text"
         class="form-control"
         id="title-new-skin-post"
-        placeholder="Enter a title of your choice"
+        placeholder="Enter the Book Title"
       />
     </div>
     <div class="mb-3">
-      <label for="content-new-skin-post" class="form-label custom-text-color">Content:</label>
+      <label for="author-new-skin-post" class="form-label custom-text-color">Author:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="author-new-skin-post"
+        placeholder="Enter the Author"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="synopsis-new-skin-post" class="form-label custom-text-color">Synopsis:</label>
       <textarea
         class="form-control"
-        id="content-new-skin-post"
+        id="synopsis-new-skin-post"
         rows="5"
-        placeholder="Enter content here"
+        placeholder="Enter synopsis here"
       ></textarea>
     </div>
     <div class="mb-3">
-      <button type="submit" class="btn btn-primary">Create Post</button>
+      <button type="submit" class="btn btn-primary">Add Book</button>
     </div>
   </form>
 </div>

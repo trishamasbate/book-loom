@@ -1,5 +1,5 @@
 {
-  "name": "skin-script",
+  "name": "book-loom",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trishamasbate/skin-script.git"
+    "url": "git+https://github.com/trishamasbate/book-loom.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/trishamasbate/skin-script/issues"
+    "url": "https://github.com/trishamasbate/book-loom/issues"
   },
-  "homepage": "https://github.com/trishamasbate/skin-script#readme",
+  "homepage": "https://github.com/trishamasbate/book-loom#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-session-sequelize": "^7.0.4",

@@ -2,8 +2,9 @@
 <main class="container mt-5">
   <article>
     <h1 class="custom-text-color">{{title}}</h1>
-    <p class="custom-text-color" style="font-style: italic;">Created by: {{user.username}} | Date: {{format_date createdAt}}</p>
-    <p class="text-dark">{{content}}</p>
+    <p class="custom-text-color">By: {{author}}</p>
+    <p class="custom-text-color" style="font-style: italic;">Owner: {{user.username}} | Date: {{format_date createdAt}}</p>
+    <p class="text-dark">{{synopsis}}</p>
   </article>
   {{#if logged_in}}
     <form class="new-skin-comment-form" class="mb-3">

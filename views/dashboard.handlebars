@@ -12,8 +12,9 @@
       <h2><a href="/post/{{id}}" class="text-decoration-none text-reset custom-text-color" style="font-style: italic;">
         {{title}}
       </a></h2>
-      <p class="text-dark">Created by: {{user.username}} | Date: {{format_date createdAt}}</p>
-      <a href="/editpost/{{id}}" class="btn bg-custom">Edit Post</a>
+      <p class="custom-text-color">By: {{author}}</p>
+      <p class="text-dark">Owner: {{user.username}} | Date: {{format_date createdAt}}</p>
+      <a href="/editpost/{{id}}" class="btn bg-custom">Edit Book</a>
       <button class="btn btn-danger delete-post" data-post-id="{{id}}">Delete</button>
     </div>
   {{/each}}

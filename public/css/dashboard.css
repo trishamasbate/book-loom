@@ -7,20 +7,42 @@
     background-color: rgba(126, 126, 126, 0.2);
     border-radius: 0.5em;
   }
+
+  .bg-light-gray {
+    background-color: rgba(200, 200, 200, 0.2); /* Light gray with 20% opacity */
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #000; /* Black text color for navbar links */
+  }
+  
+  .navbar-dark .navbar-brand {
+    color: #000; /* Black text color for the brand */
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #000; /* Keep the text color black */
+    text-shadow: 0 0 5px rgba(128, 128, 128, 0.8); /* Gray glow effect */
+  }
+
+  /* Custom style for the black hamburger icon */
+  .navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
   
   body {
-    background-image: url('/images/bg_pastel.jpg');
+    background-image: url('/images/white-paper-texture.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .bg-custom {
-    background-color: #D596BC !important;
+    background-color: #9AACCC !important;
   }
   
   .custom-text-color {
-    color: #6F405D !important;
+    color: #5E6878 !important;
   }
   
   /* Responsive Features */
