@@ -50,6 +50,10 @@
   .custom-text-color {
     color: #5E6878 !important;
   }
+
+  .navbar {
+    font-size: 1.5rem;
+  }
   
   /* Responsive Features */
   
