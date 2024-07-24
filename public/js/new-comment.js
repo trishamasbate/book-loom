@@ -1,9 +1,9 @@
-const newSkinCommentFormHandler = async (event) => {
+const newBookCommentFormHandler = async (event) => {
     event.preventDefault();
   
     const post_id = parseInt(window.location.pathname.split('/').pop());
   
-    const content = document.querySelector('#content-new-skin-comment').value.trim();
+    const content = document.querySelector('#content-new-sbook-comment').value.trim();
   
     if (content) {
       const response = await fetch(`/api/comments`, {
@@ -25,8 +25,8 @@ const newSkinCommentFormHandler = async (event) => {
   
   
   // Event listeners
-  const newSkinCommentForm = document.querySelector('.new-skin-comment-form');
-  if (newSkinCommentForm) {
-    newSkinCommentForm.addEventListener('submit', newSkinCommentFormHandler);
+  const newBookCommentForm = document.querySelector('.new-book-comment-form');
+  if (newBookCommentForm) {
+    newBookCommentForm.addEventListener('submit', newBookCommentFormHandler);
   }
   

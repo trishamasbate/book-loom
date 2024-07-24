@@ -1,5 +1,5 @@
 // Signup request
-const skinSignupFormHandler = async (event) => {
+const bookSignupFormHandler = async (event) => {
     event.preventDefault();
   
     const username = document.querySelector('#username').value.trim();
@@ -22,9 +22,9 @@ const skinSignupFormHandler = async (event) => {
   };
   
   // Event listener
-  const skinSignupForm = document.querySelector('#signup-form');
-  if (skinSignupForm) {
-    skinSignupForm.addEventListener('submit', skinSignupFormHandler);
+  const bookSignupForm = document.querySelector('#signup-form');
+  if (bookSignupForm) {
+    bookSignupForm.addEventListener('submit', bookSignupFormHandler);
   }
   
   
