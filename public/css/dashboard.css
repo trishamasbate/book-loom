@@ -15,7 +15,7 @@
   }
 
   .bg-light-gray {
-    background-color: rgba(200, 200, 200, 0.2); /* Light gray with 20% opacity */
+    background-color: rgba(200, 200, 200, 0.5); /* Light gray with 50% opacity */
   }
   
   .navbar-dark .navbar-nav .nav-link {
