@@ -1,0 +1,26 @@
+<main class="container mt-5">
+  <h1 class="mb-4 text-dark">Edit Post</h1>
+  <form class="update-skin-post-form" class="mb-3">
+    <div class="mb-3">
+      <label for="title-update-skin-post" class="form-label custom-text-color">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title-update-skin-post"
+        placeholder="Enter post title"
+        value="{{title}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="content-update-skin-post" class="form-label custom-text-color">Content</label>
+      <textarea
+        class="form-control"
+        id="content-update-skin-post"
+        rows="3"
+        placeholder="Enter post content"
+      >{{content}}</textarea>
+    </div>
+    <button type="submit" id="update-skin-post" class="btn btn-primary">Update Post</button>
+    <button type="button" id="delete-skin-post" class="btn btn-danger">Delete Post</button>
+  </form>
+</main>

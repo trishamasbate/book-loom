@@ -1,35 +1,32 @@
 {
-  "name": "book-loom",
+  "name": "skin-script",
   "version": "1.0.0",
-  "description": "A web application for sharing and borrowing books.",
+  "description": "",
   "main": "server.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node seeder/seed.js"
+    "seed": "node seeds/index.js"
   },
-  "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trishamasbate/book-loom.git"
+    "url": "git+https://github.com/trishamasbate/skin-script.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  },
   "bugs": {
-    "url": "https://github.com/trishamasbate/book-loom/issues"
+    "url": "https://github.com/trishamasbate/skin-script/issues"
   },
-  "homepage": "https://github.com/trishamasbate/book-loom#readme",
+  "homepage": "https://github.com/trishamasbate/skin-script#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1",
-    "dotenv": "^10.0.0",
-    "express": "^4.19.2",
-    "express-handlebars": "^5.3.4",
-    "express-session": "^1.18.0",
-    "pg": "^8.6.0",
-    "pg-hstore": "^2.3.3",
-    "sequelize": "^6.6.5",
-    "socket.io": "^4.1.3"
+    "bcryptjs": "^2.4.3",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.6",
+    "pg": "^8.12.0",
+    "sequelize": "^6.29.3"
   }
 }
