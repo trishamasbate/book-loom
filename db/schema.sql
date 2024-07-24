@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS skinscript_db;
-CREATE DATABASE skinscript_db;
+DROP DATABASE IF EXISTS bookloom_db;
+CREATE DATABASE bookloom_db;
