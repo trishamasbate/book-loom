@@ -15,7 +15,7 @@
       <p class="custom-text-color">By: {{author}}</p>
       <p class="text-dark">Book Owner: {{user.username}} | Date: {{format_date createdAt}}</p>
       <a href="/editpost/{{id}}" class="btn btn-secondary">Edit Book</a>
-      <button class="btn btn-danger delete-post" data-post-id="{{id}}">Delete</button>
+      <button class="btn bg-custom-delete delete-post" data-post-id="{{id}}">Delete</button>
     </div>
   {{/each}}
 </main>

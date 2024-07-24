@@ -46,7 +46,15 @@
   .bg-custom {
     background-color: #71797E !important;
   }
+
+  .bg-custom-delete {
+    background-color: #BD8376 !important;
+  }
   
+  .bg-custom-delete:hover {
+    background-color: #A0665A !important;
+  }
+
   .custom-text-color {
     color: #5E6878 !important;
   }
