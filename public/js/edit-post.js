@@ -4,12 +4,12 @@ const post_id = window.location.toString().split("/")[
   ];
   
   // Update the post
-  const updateSkinPostFormHandler = async (event) => {
+  const updateBookPostFormHandler = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector("#title-update-skin-post").value.trim();
-    const author = document.querySelector("#author-update-skin-post").value.trim();
-    const synopsis = document.querySelector("#synopsis-update-skin-post").value.trim();
+    const title = document.querySelector("#title-update-book-post").value.trim();
+    const author = document.querySelector("#author-update-book-post").value.trim();
+    const synopsis = document.querySelector("#synopsis-update-book-post").value.trim();
   
     if (title && author && synopsis) {
       const response = await fetch(`/api/posts/${post_id}`, {
@@ -27,7 +27,7 @@ const post_id = window.location.toString().split("/")[
   };
   
   // Delete the post
-  const deleteSkinPostFormHandler = async (event) => {
+  const deleteBookPostFormHandler = async (event) => {
     event.preventDefault();
   
     const response = await fetch(`/api/posts/${post_id}`, {
@@ -42,15 +42,15 @@ const post_id = window.location.toString().split("/")[
   };
   
   // Event listeners
-  const updateSkinPostButton = document.querySelector("#update-skin-post");
+  const updateBookPostButton = document.querySelector("#update-book-post");
   
-  if (updateSkinPostButton) {
-    updateSkinPostButton.addEventListener("click", updateSkinPostFormHandler);
+  if (updateBookPostButton) {
+    updateBookPostButton.addEventListener("click", updateBookPostFormHandler);
   }
   
-  const deleteSkinPostButton = document.querySelector("#delete-skin-post");
+  const deleteBookPostButton = document.querySelector("#delete-book-post");
   
-  if (deleteSkinPostButton) {
-    deleteSkinPostButton.addEventListener("click", deleteSkinPostFormHandler);
+  if (deleteBookPostButton) {
+    deleteBookPostButton.addEventListener("click", deleteBookPostFormHandler);
   }
   

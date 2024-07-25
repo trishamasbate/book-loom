@@ -1,10 +1,10 @@
 // Create new post public/js/new-post.js
-const newSkinPostFormHandler = async (event) => {
+const newBookPostFormHandler = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector('#title-new-skin-post').value.trim();
-    const author = document.querySelector('#author-new-skin-post').value.trim();
-    const synopsis = document.querySelector('#synopsis-new-skin-post').value.trim();
+    const title = document.querySelector('#title-new-book-post').value.trim();
+    const author = document.querySelector('#author-new-book-post').value.trim();
+    const synopsis = document.querySelector('#synopsis-new-book-post').value.trim();
   
     if (title && author && synopsis) {
       const response = await fetch('/api/posts', {
@@ -22,8 +22,8 @@ const newSkinPostFormHandler = async (event) => {
   };
   
   // Event listeners
-  const newSkinPostForm = document.querySelector('.new-skin-post-form');
-  if (newSkinPostForm) {
-    newSkinPostForm.addEventListener('submit', newSkinPostFormHandler);
+  const newBookPostForm = document.querySelector('.new-book-post-form');
+  if (newBookPostForm) {
+    newBookPostForm.addEventListener('submit', newBookPostFormHandler);
   }
   
