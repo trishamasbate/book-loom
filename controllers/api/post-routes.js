@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const { Post, User, Comment } = require("../../models");
+const { Op } = require("sequelize");
 const withAuth = require("../../utils/auth");
+
 // Get all posts with associated username
 router.get("/", async (req, res) => {
   try {
@@ -80,6 +82,30 @@ router.delete("/:id", withAuth, async (req, res) => {
     res.status(200).json(deletedPost);
   } catch (err) {
     res.status(500).json(err);
+  }
+});
+// Search posts by title
+router.get("/search", async (req, res) => {
+  try {
+    const query = req.query.q; // Get the search query from the request
+    const posts = await Post.findAll({
+      where: {
+        title: {
+          [Op.iLike]: `%${query}%`, // Case-insensitive search
+        },
+      },
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+      ],
+    });
+
+    res.json(posts); // Send the found posts as JSON response
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 // Export the router
