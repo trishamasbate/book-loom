@@ -7,7 +7,8 @@ router.post("/", withAuth, async (req, res) => {
   try {    
     // Create a new comment with the provided data
     const newComment = await Comment.create({
-      ...req.body,
+      comment_text: req.body.comment_text,
+      post_id: req.body.post_id,
       user_id: req.session.user_id,
     });
     // Send a response with the new comment data
