@@ -6,10 +6,13 @@ const routes = require("./controllers");
 const sequelize = require("./config/connection");
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({ helpers: require("./utils/helpers") });
-// Creating express app and setting port
+const { Op } = require("sequelize");
+const { Post, User } = require('./models'); // Ensure you import your models
 
+// Creating express app and setting port
 const app = express();
 const PORT = process.env.PORT || 3001;
+
 // Setting up session object with secret, cookie, and store
 const sess = {
   secret: 'Super secret secret',
@@ -41,6 +44,31 @@ app.use(
     saveUninitialized: false,
   })
 );
+
+// Adding search route
+app.get('/api/posts/search', async (req, res) => {
+  const query = req.query.q;
+  try {
+    const posts = await Post.findAll({
+      where: {
+        title: {
+          [Op.iLike]: `%${query}%` // Case-insensitive search
+        }
+      },
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    });
+    res.json(posts);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to search posts' });
+  }
+});
+
 // Using routes from controller
 app.use(routes);
 // Syncing sequelize models with database and starting server
