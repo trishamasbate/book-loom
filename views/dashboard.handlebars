@@ -9,6 +9,7 @@
   <h1 class="mb-4 text-black">Book Loom Contributions:</h1>
   {{#each posts}}
     <div class="post-container post mb-3">
+      <img src="" alt="Book Cover" class="book-cover" style="width: 100px; height: auto; float: left; margin-right: 20px; margin-left: 10px; margin-top: 10px;" data-post-id="{{id}}">
       <h2><a href="/post/{{id}}" class="text-decoration-none text-reset custom-text-color" style="font-style: italic;">
         {{title}}
       </a></h2>
@@ -19,3 +20,14 @@
     </div>
   {{/each}}
 </main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.book-cover').forEach(img => {
+      const postId = img.getAttribute('data-post-id');
+      const cover = localStorage.getItem(`post-${postId}-cover`);
+      if (cover) {
+        img.setAttribute('src', cover);
+      }
+    });
+  });
+</script>

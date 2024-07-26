@@ -26,6 +26,10 @@ Post.init(
         len: [1],
       },
     },
+    cover: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

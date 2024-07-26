@@ -26,24 +26,17 @@ const sess = {
 
 // Using session middleware with session object
 app.use(session(sess));
-// Parsing incoming JSON and URL-encoded data
 
+// Parsing incoming JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 // IMPORTANT FOR PUBLIC FOLDERS - serving static files such as images from public directory
 app.use(express.static("public"));
+
+// Setting up Handlebars.js as the template engine
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
-
-// Using session middleware again with a different session object
-app.use(
-  session({
-    secret: process.env.SECRET,
-    store: new SequelizeStore({ db: sequelize }),
-    resave: false,
-    saveUninitialized: false,
-  })
-);
 
 // Adding search route
 app.get('/api/posts/search', async (req, res) => {
@@ -71,6 +64,7 @@ app.get('/api/posts/search', async (req, res) => {
 
 // Using routes from controller
 app.use(routes);
+
 // Syncing sequelize models with database and starting server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
