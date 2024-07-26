@@ -1,7 +1,7 @@
 // Import the necessary models
-const User = require("./User");
-const Post = require("./Post");
-const Comment = require("./Comment");
+const User = require("./User.js");
+const Post = require("./Post.js");
+const Comment = require("./Comment.js");
 // Define the relationships between the models
 User.hasMany(Post, {
   foreignKey: "user_id", // Set up the foreign key relationship
