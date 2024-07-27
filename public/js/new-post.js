@@ -29,20 +29,16 @@ const newBookPostFormHandler = async (event) => {
   const title = document.querySelector('#title-new-book-post').value.trim();
   const author = document.querySelector('#author-new-book-post').value.trim();
   const synopsis = document.querySelector('#synopsis-new-book-post').value.trim();
-  const cover = getRandomBookCover(); // Get a random cover image
 
   if (title && author && synopsis) {
+    const cover = getRandomBookCover(); // Get a random cover image
     const response = await fetch('/api/posts', {
       method: 'POST',
-      body: JSON.stringify({ title, author, synopsis }),
+      body: JSON.stringify({ title, author, synopsis, cover }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      // Save the cover image URL to localStorage
-      const postId = (await response.json()).id;
-      localStorage.setItem(`post-${postId}-cover`, cover);
-
       document.location.replace('/dashboard'); // When successful, load the dashboard page
     } else {
       alert('Failed to create a new post.'); // When unsuccessful, show alert

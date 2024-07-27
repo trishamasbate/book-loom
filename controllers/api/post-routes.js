@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // Get one post by ID with associated username and comments
 router.get("/:id", async (req, res) => {
   try {
@@ -35,6 +36,7 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // Create a new post with authenticated user
 router.post("/", withAuth, async (req, res) => {
   try {
@@ -47,6 +49,7 @@ router.post("/", withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 // Update an existing post with authenticated user
 router.put("/:id", withAuth, async (req, res) => {
   try {
@@ -63,6 +66,7 @@ router.put("/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // Delete a post with authenticated user
 router.delete("/:id", withAuth, async (req, res) => {
   try {
@@ -84,6 +88,7 @@ router.delete("/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // Search posts by title
 router.get("/search", async (req, res) => {
   try {
@@ -108,5 +113,6 @@ router.get("/search", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 // Export the router
 module.exports = router;
