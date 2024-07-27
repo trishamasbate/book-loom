@@ -3,7 +3,7 @@
     <h1 class="custom-text-color">{{title}}</h1>
     <p class="custom-text-color">By: {{author}}</p>
     <p class="custom-text-color" style="font-style: italic;">Book Owner: {{user.username}} | Date: {{format_date createdAt}}</p>
-    <img src="" alt="Book Cover" class="book-cover" style="width: 200px; height: auto; display: block; margin-bottom: 20px;" data-post-id="{{id}}">
+    <img src="{{cover}}" alt="Book Cover" class="book-cover" style="width: 200px; height: auto; display: block; margin-bottom: 20px;">
     <p class="text-dark">{{synopsis}}</p>
   </article>
   {{#if logged_in}}
@@ -29,16 +29,4 @@
     </div>
   {{/each}}
 </main>
-
 <script src="/public/js/new-comment.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Set the cover image for the post
-    const coverImage = document.querySelector('.book-cover');
-    const postId = coverImage.getAttribute('data-post-id');
-    const cover = localStorage.getItem(`post-${postId}-cover`);
-    if (cover) {
-      coverImage.setAttribute('src', cover);
-    }
-  });
-</script>
