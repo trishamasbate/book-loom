@@ -121,7 +121,7 @@ Email: trisha.masbate@gmail.com<br>
 ✨ Github link: [Thecaprifire](https://github.com/Thecaprifire)<br>
 Email: ianjandaluz@gmail.com<br>
 
-✨ Github link: [UBC-Yang](https://github.com/Thecaprifire)<br>
+✨ Github link: [UBC-Yang](https://github.com/UBC-Yang)<br>
 Email: yang.shu.psy@gmail.com<br>
 
 ## 🪪 License
