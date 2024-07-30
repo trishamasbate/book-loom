@@ -1,5 +1,5 @@
 // Import the necessary models
-const User = require("./User.js");
+const User = require("./user.js");
 const Post = require("./Post.js");
 const Comment = require("./Comment.js");
 // Define the relationships between the models
